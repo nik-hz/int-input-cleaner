@@ -1,4 +1,4 @@
-module.exports.intCleaner = (value) => {
+const intCleaner = (value) => {
     // check if for , in the str and convert to .
 
     // check for any NaN
@@ -17,3 +17,5 @@ module.exports.intCleaner = (value) => {
 
     return floatDecimalValue
 }
+
+module.exports = intCleaner
