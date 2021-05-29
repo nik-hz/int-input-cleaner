@@ -1,4 +1,4 @@
-module.intCleaner = (value) => {
+module.exports.intCleaner = (value) => {
     // check if for , in the str and convert to .
 
     // check for any NaN
