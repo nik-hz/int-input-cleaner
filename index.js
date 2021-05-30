@@ -1,20 +1,22 @@
 const intCleaner = (value) => {
-    // check if for , in the str and convert to .
-
     // check for any NaN
-
-    // return float
-
     const numbers = /[0-9]/
 
     if (!numbers.test(value)) {
-        throw new TypeError('enter a valid number', 'intCleaner')
+        return NaN
     }
 
+    // check if for , in the str and convert to .
     const decimalConvertedValue = value.replace(',', '.')
 
     const floatDecimalValue = parseFloat(decimalConvertedValue)
 
+    // if there were any issues in the previous two lines this will return NaN
+    if (!typeof floatDecimalValue !== Number) {
+        return NaN
+    }
+
+    // return float
     return floatDecimalValue
 }
 
